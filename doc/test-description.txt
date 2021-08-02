@@ -1,0 +1,48 @@
+FILES:
+
+    test01.in 
+
+	File containing valid unoriented graph.
+
+    test01_reorder.in 
+
+    Same file as test01.in, but without shuffled edge lines 
+
+    test04.in
+    test03.in
+    test04.in
+
+	Files containing invalid format.  
+
+TESTS:
+
+    test01.out
+    
+    command: `$ ./spanning-trees < ./test/test01.in` (execution time: 20-50 ms)
+    Description: Demonstration of use of computation on valid input,
+    from assignment.
+
+    test01_reorder.out
+
+    command: `$ ./spanning-trees < ./test/test01_reorder.in`
+    Description: Demonstration of use of correct computation on
+    			 input file with same but shuffled contents as test01.out.
+
+    test02.out
+    test03.out
+    test04.out
+    
+    command: `$ ./ford-fulkerson  < ./test/test02.in`
+             `$ ./ford-fulkerson  < ./test/test03.in`
+             `$ ./ford-fulkerson  < ./test/test04.in`
+    Description: Demonstration of processing invalid inputs,
+    			 for not alphabetic nodes (02), incorrect line (03),
+    			 and blank lines (04).
+    
+    test05.out
+    test06.out
+    
+    command: `$ ./spanning-trees < ./test/test05.in` (execution time: 20-50 ms)
+             `$ ./spanning-trees < ./test/test06.in` (execution time: 50-90 ms)
+    Description: Demonstration of use of computation on other valid inputs.
+	 
